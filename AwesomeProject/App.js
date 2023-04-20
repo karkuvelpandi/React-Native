@@ -1,43 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import IntroPage from "./app/IntroPage";
 export default function App() {
- 
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
-      <View style={styles.color1}>   hi   </View>
-      <View style={styles.color2}>        <Text style={{fontSize:80,color:"red"}}>Java Kishore</Text>
-   </View>
-      <View style={styles.color3}>   how are u   </View>
+      <IntroPage />
     </View>
-
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    justifyContent: "center",
+    alignItems: "center",
     flex: 1,
-    backgroundColor: '#fff',
-   flexDirection:'row'
+    backgroundColor: "#000",
+    flexDirection: "row",
   },
-  color1:{
-    backgroundColor:'orange',
-    flex:1,
-    alignItems:'center',
-    justifyContent:'center',
+  color1: {
+    backgroundColor: "orange",
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
   },
-  color3:{
-    flex:1,
-    backgroundColor:'green',
-    alignItems:'center',
-    justifyContent:'center',
-    
+  color3: {
+    flex: 1,
+    color: "black",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  color2:{
-    flex:1,
+  color2: {
+    flex: 1,
     // backgroundColor:'blue',
-    alignItems:'center',
-    justifyContent:'center',  
-  }
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });
