@@ -1,0 +1,31 @@
+List of difference need to take care.
+IOS vs android
+
+1. Styles: Shadow
+On IOS:
+ element:{
+    shadowColor:"black",
+    shadowOffset:{width:0,height:1},
+    shadowOpacity:0.8,
+    shadowRadius:1,
+ }
+On android:
+ element:{
+    elevation:4,
+ }
+
+2. Styles: Border radius is not supported directly on a <Text> element in
+   React Native. Instead we need to wrap the <Text> with <View> and apply the 
+   same style we want
+
+   <Text style={{borderRadius:10}}>Example text</Text>
+   The above statement will work fine in android not in IOS. As a work around
+   we can wrap a view and style accordingly as below.
+   
+   <View style={{borderRadius:10}}>
+     <Text> Example text </Text>
+   </View>
+  
+  **Important note here is the parent style like color will not applied to child if we 
+  given to parent just like the CSS. It will not cascade as its a javascript objects specific
+  to that particular elements
